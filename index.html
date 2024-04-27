@@ -30,7 +30,7 @@
     }
 
     .container {
-      max-width: 800px;
+      max-width: 90%; /* Adjusted for responsiveness */
       margin: 50px auto;
       text-align: center;
       padding: 20px;
@@ -107,6 +107,67 @@
       left: 0;
       width: 100%;
     }
+
+    /* Adjusted styles for the button and video container */
+    .container button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .container button:hover {
+      background-color: #45a049;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      padding-top: 30px;
+      height: 0;
+      overflow: hidden;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Adjusted styles for the heading */
+    .heading h1 {
+      font-size: 28px; /* Adjusted font size for small devices */
+    }
+
+    .heading h3 {
+      font-size: 16px; /* Adjusted font size for small devices */
+    }
+
+    /* Adjusted styles for the scrolling text */
+    .marquee-content {
+      font-size: 14px; /* Adjusted font size for small devices */
+    }
+
+    /* Adjusted styles for the footer */
+    footer {
+      font-size: 14px; /* Adjusted font size for small devices */
+    }
+
+    .container {
+      max-width: 90%; /* Adjusted for small devices */
+      margin: 20px auto; /* Adjusted margin for small devices */
+      text-align: center;
+      padding: 5px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   </style>
 </head>
 <body>
@@ -118,7 +179,7 @@
   <!-- Scrolling text container -->
   <div class="marquee-container">
     <div class="marquee-content">
-      <span style="font-family: 'Arial', sans-serif; font-size: 20px; font-weight: bold; color: #ff6347;">Dive into the world of education with our website! Seamlessly navigate through all subjects and modules, and gain access to a rich collection of YouTube lecture classes and PDF notes designed for every semester.</span>
+      <span style="font-family: 'Arial', sans-serif; font-size: 14px; font-weight: bold; color: #ff6347;">Dive into the world of education with our website! Seamlessly navigate through all subjects and modules, and gain access to a rich collection of YouTube lecture classes and PDF notes designed for every semester.</span>
     </div>
   </div>
   
@@ -135,18 +196,13 @@
       <div class="option" onclick="redirectToPage('page7.html')">S7</div>
       <div class="option" onclick="redirectToPage('page8.html')">S8</div>
     </div>
-   <h5>"Seeking a little inspiration?"
-    <button onclick="playVideo()">Click Here</button></h5> 
-
-
-
-
-
-
+    <h5>Seeking a little inspiration?
+      <button onclick="playVideo()">Click Here</button>
+    </h5> 
   </div>
 
   <!-- Footer -->
-  <footer>&copy; <b>2024 Niggas CEP  &nbsp;</b> All rights reserved.</footer>
+  <footer>&copy; <b>2024 Niggas CEP  &nbsp;</b> All rights reserved</footer>
 
   <script>
     function redirectToPage(url) {
