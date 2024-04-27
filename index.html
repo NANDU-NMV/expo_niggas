@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choose Your Semester</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Existing CSS styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: linear-gradient(45deg, #c2face, #dae9b0, #d9a4db, #e7b3b3);
+      background-size: 400% 400%;
+      animation: gradientAnimation 15s ease infinite;
+    }
+
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 42px;
+      color: #333;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .options {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .option {
+      background-color: #3498db;
+      color: #fff;
+      padding: 20px 30px;
+      margin: 10px;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .option:hover {
+      background-color: #2980b9;
+    }
+
+    /* Additional styles for the scrolling text */
+    .marquee-container {
+      overflow: hidden;
+      white-space: nowrap;
+      margin-top: 20px;
+      background-color: #f7f7f7;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .marquee-content {
+      display: inline-block;
+      animation: marqueeAnimation 20s linear infinite;
+      font-size: 18px;
+      color: #555;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+      padding: 5px;
+    }
+
+    @keyframes marqueeAnimation {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    /* Additional styles for the footer */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="heading">
+    <center> <h1>Welcome to Our Educational Platform</h1>
+      <h3>Empowering Minds with Knowledge</h3> </center> 
+    </div>
+  
+  <!-- Scrolling text container -->
+  <div class="marquee-container">
+    <div class="marquee-content">
+      <span style="font-family: 'Arial', sans-serif; font-size: 20px; font-weight: bold; color: #ff6347;">Dive into the world of education with our website! Seamlessly navigate through all subjects and modules, and gain access to a rich collection of YouTube lecture classes and PDF notes designed for every semester.</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <h3 style="color: #2f065e;"><i>"Exhausted from the search for clear YouTube lectures and PDF notes? Let's simplify things. Pick your semester and watch the magic unfold!"</i></h3>
+    <h1>Choose your Semester</h1>
+    <div class="options">
+      <div class="option" onclick="redirectToPage('page1.html')">S1</div>
+      <div class="option" onclick="redirectToPage('page2.html')">S2</div>
+      <div class="option" onclick="redirectToPage('page3.html')">S3</div>
+      <div class="option" onclick="redirectToPage('page4.html')">S4</div>
+      <div class="option" onclick="redirectToPage('page5.html')">S5</div>
+      <div class="option" onclick="redirectToPage('page6.html')">S6</div>
+      <div class="option" onclick="redirectToPage('page7.html')">S7</div>
+      <div class="option" onclick="redirectToPage('page8.html')">S8</div>
+    </div>
+   <h5>"Seeking a little inspiration?"
+    <button onclick="playVideo()">Click Here</button></h5> 
+
+
+
+
+
+
+  </div>
+
+  <!-- Footer -->
+  <footer>&copy; <b>2024 Niggas CEP  &nbsp;</b> All rights reserved.</footer>
+
+  <script>
+    function redirectToPage(url) {
+      window.location.href = url;
+    }
+
+    function playVideo() {
+      // Replace 'VIDEO_ID_HERE' with your YouTube video ID
+      window.location.href = 'https://www.youtube.com/shorts/YN8wnWfo7nU';
+    }
+  </script>
+</body>
+</html>
