@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S1 Subjects</title>
+  <link rel="stylesheet" href="styles.css">
+ <style>
+    /* Subject page styles */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  animation: gradientAnimation 15s ease infinite;
+  background: linear-gradient(45deg, #c2face, #dae9b0, #d9a4db, #e7b3b3);
+  background-size: 400% 400%;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+header {
+  background-color: #3498db;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.subject-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.subject-box {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.subject-box:hover {
+  background-color: #ec6363;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.message-above-footer {
+  background-color: #ffffff28;
+  color: #802222;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.jump-to-s2 {
+  margin-top: 20px;
+}
+
+.jump-to-s2 a {
+  display: inline-block;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.jump-to-s2 a:hover {
+  background-color: #3e21e2;
+}
+
+@media (min-width: 768px) {
+  .subject-boxes {
+    justify-content: space-around;
+  }
+  
+  .subject-box {
+    width: calc(20% - 20px); /* Adjust width for larger screens */
+  }
+
+  .footer {
+    margin-top: 20px; /* Adjust spacing from subject boxes */
+  }
+}
+
+ </style>
+
+</head>
+<body>
+  <!-- Header section -->
+  <header>
+    <h1>S1 Subjects</h1>
+  </header>
+<center>
+  <!-- Subject boxes section -->
+  <div class="subject-boxes">
+    <div class="subject-box">
+      <!-- You can add your images or animations here -->
+      <h2>Linear Algebra and Calculus (MAT101)</h2>
+    </div>
+    <div class="subject-box">
+        <!-- You can add your images or animations here -->
+        <h2>Engineering Chemistry</h2>
+      </div>
+      <div class="subject-box">
+        <!-- You can add your images or animations here -->
+        <h2>Engineering Mechanics</h2>
+      </div>
+      <div class="subject-box">
+        <!-- You can add your images or animations here -->
+        <h2>Life Skills</h2>
+      </div>
+      <div class="subject-box">
+        <!-- You can add your images or animations here -->
+        <h2>Basics of Electrical & Electronics</h2>
+      </div>
+  </div>
+
+  <!-- Message for S2 -->
+  <div class="message-above-footer">
+    <h3>Subject not listed? Dive into S2 for an extended selection!</h3>
+    <div class="jump-to-s2">
+      <a href="S2.html"><i><b>S2</b> Click Here</i></a>
+    </div>
+  </div>
+</center>
+  <!-- Footer section -->
+  <div class="footer">
+    <p>&copy; 2024 Niggas CEP. All rights reserved.</p>
+  </div>
+</body>
+</html>
