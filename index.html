@@ -6,168 +6,187 @@
   <title>Choose Your Semester</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* Existing CSS styles */
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background: linear-gradient(45deg, #c2face, #dae9b0, #d9a4db, #e7b3b3);
-      background-size: 400% 400%;
-      animation: gradientAnimation 15s ease infinite;
-    }
+   /* Existing CSS styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(45deg, #c2face, #dae9b0, #d9a4db, #e7b3b3);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+}
 
-    @keyframes gradientAnimation {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
-    }
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
-    .container {
-      max-width: 90%; /* Adjusted for responsiveness */
-      margin: 50px auto;
-      text-align: center;
-      padding: 20px;
-      background-color: rgba(255, 255, 255, 0.9);
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    }
+.container {
+  max-width: 90%; /* Adjusted for responsiveness */
+  margin: 50px auto;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  overflow: auto; /* Add overflow property for scrolling */
+}
 
-    h1 {
-      font-size: 42px;
-      color: #333;
-      margin-bottom: 30px;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    }
+h1 {
+  font-size: 42px;
+  color: #333;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-    .options {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-    .option {
-      background-color: #3498db;
-      color: #fff;
-      padding: 20px 30px;
-      margin: 10px;
-      cursor: pointer;
-      border-radius: 8px;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
+.option {
+  background-color: #3498db;
+  color: #fff;
+  padding: 20px 30px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-    .option:hover {
-      background-color: #2980b9;
-    }
+.option:hover {
+  background-color: #2980b9;
+}
 
-    /* Additional styles for the scrolling text */
-    .marquee-container {
-      overflow: hidden;
-      white-space: nowrap;
-      margin-top: 20px;
-      background-color: #f7f7f7;
-      padding: 10px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
 
-    .marquee-content {
-      display: inline-block;
-      animation: marqueeAnimation 20s linear infinite;
-      font-size: 18px;
-      color: #555;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-      padding: 5px;
-    }
 
-    @keyframes marqueeAnimation {
-      0% {
-        transform: translateX(100%);
-      }
-      100% {
-        transform: translateX(-100%);
-      }
-    }
+/* Additional styles for the footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
 
-    /* Additional styles for the footer */
-    footer {
-      background-color: #333;
-      color: #fff;
-      padding: 10px 0;
-      text-align: center;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-    }
+/* Adjusted styles for the button and video container */
+.container button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #c2cf0c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
-    /* Adjusted styles for the button and video container */
-    .container button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      font-size: 18px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
+.container button:hover {
+  background-color: #45a049;
+}
 
-    .container button:hover {
-      background-color: #45a049;
-    }
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
 
-    .video-container {
-      position: relative;
-      padding-bottom: 56.25%; /* 16:9 aspect ratio */
-      padding-top: 30px;
-      height: 0;
-      overflow: hidden;
-    }
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
-    .video-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
+/* Adjusted styles for the heading */
+.heading h1 {
+  font-size: 28px; /* Adjusted font size for small devices */
+}
 
-    /* Adjusted styles for the heading */
-    .heading h1 {
-      font-size: 28px; /* Adjusted font size for small devices */
-    }
+.heading h3 {
+  font-size: 16px; /* Adjusted font size for small devices */
+}
 
-    .heading h3 {
-      font-size: 16px; /* Adjusted font size for small devices */
-    }
 
-    /* Adjusted styles for the scrolling text */
-    .marquee-content {
-      font-size: 14px; /* Adjusted font size for small devices */
-    }
+/* Adjusted styles for the footer */
+footer {
+  font-size: 14px; /* Adjusted font size for small devices */
+}
 
-    /* Adjusted styles for the footer */
-    footer {
-      font-size: 14px; /* Adjusted font size for small devices */
-    }
+.container {
+  max-width: 90%; /* Adjusted for small devices */
+  margin: 20px auto; /* Adjusted margin for small devices */
+  text-align: center;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
 
-    .container {
-      max-width: 90%; /* Adjusted for small devices */
-      margin: 20px auto; /* Adjusted margin for small devices */
-      text-align: center;
-      padding: 5px;
-      background-color: rgba(255, 255, 255, 0.9);
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+/* Adjusted styles for the contact details */
+.contact-details {
+  display: none;
+  margin-top: 20px;
+}
+
+.founder {
+  background-color: #f7f7f7;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.founder h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+/* Animation for contact details */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.show-details {
+  display: block;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.hide-details {
+  animation: fadeOut 0.5s ease forwards;
+}
+
+
   </style>
 </head>
 <body>
@@ -176,12 +195,7 @@
       <h3>Empowering Minds with Knowledge</h3> </center> 
     </div>
   
-  <!-- Scrolling text container -->
-  <div class="marquee-container">
-    <div class="marquee-content">
-      <span style="font-family: 'Arial', sans-serif; font-size: 14px; font-weight: bold; color: #ff6347;">Dive into the world of education with our website! Seamlessly navigate through all subjects and modules, and gain access to a rich collection of YouTube lecture classes and PDF notes designed for every semester.</span>
-    </div>
-  </div>
+ 
   
   <div class="container">
     <h3 style="color: #2f065e;"><i>"Exhausted from the search for clear YouTube lectures and PDF notes? Let's simplify things. Pick your semester and watch the magic unfold!"</i></h3>
@@ -201,6 +215,44 @@
     </h5> 
   </div>
 
+  
+  <!-- Contact section -->
+<div class="container">
+  
+    <h2><i>Need assistance or have feedback? Reach out to us at your convenience!</i></h2>
+    <button onclick="toggleContact()">Contact Founders</button>
+    <br> <br><br>
+    <!-- Contact details of the founders -->
+    <div id="contactDetails" class="contact-details">
+        
+      <div class="founder">
+<h2 style="color: #4e298ab7;"><i>"Follow us on Instagram for a good time! 😄</i></h2> <br> <br>
+        <h2>Founder 1</h2>
+        <h4>NANDU M V</h4>
+       <a href="https://www.instagram.com/nannddhhu/"> <img src="instaa.jpg" alt="Insta id : nannddhhu" width="69uw"></a> &nbsp; &nbsp; 
+       <p>Email: nmv.8558@gmail.com</p>
+      </div>
+      <div class="founder">
+        <h3>Founder 2</h3>
+        <h4>IVAN JOHN BENNY</h4>
+       <a href="https://www.instagram.com/ivaneeyyy/"> <img src="instaa.jpg" alt="Insta id : nannddhhu" width="69uw"></a> &nbsp; &nbsp; 
+       <p>Email: benny_oru_umban999@hotmail.com</p>
+      </div>
+      <div class="founder">
+        <h3>Founder 3</h3>
+        <h4>HRITIK KRISHNA</h4>
+        <a href="https://www.instagram.com/hrtkrs/"> <img src="instaa.jpg" alt="Insta id : nannddhhu" width="69uw"></a> &nbsp; &nbsp; 
+        <p>Email:paidfun_hriti@gmail.com</p>
+      </div>
+      <div class="founder">
+        <h3>Founder 4</h3>
+        <h4>LANIL LIYONS</h4>
+       <a href="https://www.instagram.com/laanniil/"> <img src="instaa.jpg" alt="Insta id : nannddhhu" width="69uw"></a> &nbsp; &nbsp; 
+       <p>Email: kodupp@gmail.com</p>
+      </div>
+    </div>
+  </div>
+  
   <!-- Footer -->
   <footer>&copy; <b>2024 Niggas CEP  &nbsp;</b> All rights reserved</footer>
 
@@ -213,6 +265,25 @@
       // Replace 'VIDEO_ID_HERE' with your YouTube video ID
       window.location.href = 'https://www.youtube.com/shorts/YN8wnWfo7nU';
     }
+
+    // Function to toggle contact details visibility
+
+    function toggleContact() {
+  var contactDetails = document.getElementById("contactDetails");
+  if (contactDetails.classList.contains("show-details")) {
+    contactDetails.classList.remove("show-details");
+  } else {
+    contactDetails.classList.add("show-details");
+    // Scroll halfway down the page with smooth animation
+    var halfway = document.body.scrollHeight / 2;
+    window.scrollTo({
+      top: halfway,
+      behavior: "smooth"
+    });
+  }
+}
+
+
   </script>
 </body>
 </html>
