@@ -283,6 +283,23 @@ footer {
   }
 }
 
+  // Function to toggle footer visibility
+  function toggleFooterVisibility() {
+      var footer = document.getElementById("footer");
+      var scrollPosition = window.innerHeight + window.scrollY;
+      var pageHeight = document.body.offsetHeight;
+      if (scrollPosition >= pageHeight) {
+        footer.style.display = "block";
+      } else {
+        footer.style.display = "none";
+      }
+    }
+
+    // Event listener for scrolling
+    window.addEventListener("scroll", function() {
+      toggleFooterVisibility();
+    });
+
 
   </script>
 </body>
