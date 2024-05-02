@@ -68,15 +68,20 @@
       transition: color 0.3s ease;
     }
 
-    .footer {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-    }
+   /* Additional styles for the footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+footer {
+  font-size: 14px; /* Adjusted font size for small devices */
+}
 
     @media (min-width: 768px) {
       .branch-boxes {
@@ -152,9 +157,8 @@
   </div>
 
   <!-- Footer section -->
-  <div class="footer">
-    <p>&copy; 2024 Niggas CEP. All rights reserved.</p>
-  </div>
+   <!-- Footer -->
+   <footer>&copy; <b>2024 Niggas CEP  &nbsp;</b> All rights reserved</footer>
 
   <script>
     function changeColor(box) {
