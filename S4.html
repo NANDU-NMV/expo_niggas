@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S3 Subjects</title>
+  <style>
+    /* Subject page styles */
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #22da3b2f, #089b9448,#5456d336, #d857b896); /* Gradient background */
+      animation: gradientAnimation 10s ease infinite alternate; /* Background animation */
+    }
+
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+      100% {
+        background-position: 100% 50%;
+      }
+    }
+
+    header {
+      background-color: #3498db;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .branch-boxes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .branch-box {
+      width: 200px;
+      height: 200px;
+      margin: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      border: 2px solid transparent; /* Border initially transparent */
+    }
+
+    .branch-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .branch-box h2 {
+      font-size: 18px;
+      color: #333;
+      text-align: center;
+      margin-top: 20px;
+      transition: color 0.3s ease;
+    }
+
+    .footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    @media (min-width: 768px) {
+      .branch-boxes {
+        justify-content: space-around;
+      }
+      
+      .branch-box {
+        width: calc(30% - 40px); /* Adjust width for larger screens */
+      }
+    }
+    
+    /* Custom Styles */
+    h1 {
+      font-family: 'Arial Black', sans-serif;
+      font-size: 36px;
+      margin: 20px 0;
+    }
+
+    .branch-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .branch-box h2 {
+      position: relative;
+      z-index: 1;
+    }
+
+    .branch-box.clicked {
+      background-color: #a30707;
+    }
+
+    .branch-box.clicked h2 {
+      color: #fff;
+    }
+
+    
+  </style>
+</head>
+<body>
+  <!-- Header section -->
+  <header>
+    <h1>S3 Subjects</h1>
+  </header>
+ <center><h2 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: xx-large; font-stretch: expanded;"> Choose your Branch!</h2></center>
+
+  <!-- Branch boxes section -->
+  <div class="branch-boxes">
+    <a href="mods.html">
+    <div class="branch-box" onclick="changeColor(this)">
+      <img src="csee.jpg"  alt="Computer Science">
+      </a>
+    </div>
+    <div class="branch-box" onclick="changeColor(this)">
+        <a href="mods.html">
+      <img src="mech.jpg" alt="Mechanical Engineering">
+      </a>
+    </div>
+    <a href="mods.html">
+    <div class="branch-box" onclick="changeColor(this)">
+      <img src="civil.jpg" alt="Civil Engineering">
+      </a>
+    </div>
+    <div class="branch-box" onclick="changeColor(this)"><a href="mods.html"><
+      <img src="eee.jpg" alt="Electrical Engineering">
+      </a>
+    </div>
+    <div class="branch-box" onclick="changeColor(this)"><a href="mods.html"><
+      <img src="ece.jpg" alt="Electronics and Communication Engineering">
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer section -->
+  <div class="footer">
+    <p>&copy; 2024 Niggas CEP. All rights reserved.</p>
+  </div>
+
+  <script>
+    function changeColor(box) {
+      // Remove border from all branch boxes
+      var boxes = document.querySelectorAll('.branch-box');
+      boxes.forEach(function(box) {
+        box.style.borderColor = 'transparent';
+        box.classList.remove('clicked');
+      });
+
+      // Set border color of the clicked box to a different color
+      box.style.borderColor = '#ff8c00'; // Change border color on click
+      box.classList.add('clicked');
+    }
+  </script>
+</body>
+</html>
