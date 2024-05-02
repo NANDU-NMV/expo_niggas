@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>S3 Subjects</title>
+  <title>S6 Subjects</title>
   <style>
     /* Subject page styles */
 
@@ -68,15 +68,21 @@
       transition: color 0.3s ease;
     }
 
-    .footer {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-    }
+    /* Additional styles for the footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+footer {
+  font-size: 14px; /* Adjusted font size for small devices */
+}
 
     @media (min-width: 768px) {
       .branch-boxes {
@@ -120,7 +126,7 @@
 <body>
   <!-- Header section -->
   <header>
-    <h1>S3 Subjects</h1>
+    <h1>S6 Subjects</h1>
   </header>
  <center><h2 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: xx-large; font-stretch: expanded;"> Choose your Branch!</h2></center>
 
@@ -151,10 +157,8 @@
     </div>
   </div>
 
-  <!-- Footer section -->
-  <div class="footer">
-    <p>&copy; 2024 Niggas CEP. All rights reserved.</p>
-  </div>
+  <!-- Footer -->
+  <footer>&copy; <b>2024 Niggas CEP  &nbsp;</b> All rights reserved</footer>
 
   <script>
     function changeColor(box) {
