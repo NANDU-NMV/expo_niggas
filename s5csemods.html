@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S5 CSE Selection</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      animation: bgAnimation 10s ease infinite alternate;
+      background: linear-gradient(to right, #22da3b2f, #089b9448,#5456d336, #8be9d196); /* Gradient background */
+      animation: gradientAnimation 10s ease infinite alternate; /* Background animation */
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    h1 {
+      margin: 10px 0 0; /* Adjusted margin */
+      font-size: 32px;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      height: calc(100vh - 100px); /* Adjusted height */
+    }
+
+    .option {
+      width: 90%;
+      max-width: 400px;
+      height: 100px;
+      margin: 10px;
+      background-color: #e0e0e0;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .option:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .option:active {
+      transform: scale(0.95);
+    }
+
+    .option h2 {
+      margin: 0;
+      font-size: 24px;
+      color: #fff; /* Adjusted text color */
+      background-color: #0d21d1; /* Added background color */
+      padding: 10px 20px; /* Added padding */
+      border-radius: 10px; /* Added border radius */
+      text-decoration: none; /* Remove underline */
+    }
+
+    @keyframes bgAnimation {
+      0% {
+        background-color: #f0f0f0;
+      }
+      100% {
+        background-color: #d3d3d3;
+      }
+    }
+
+    @media only screen and (min-width: 768px) {
+      .options {
+        padding: 40px;
+      }
+      .option {
+        width: 50%;
+      }
+      .option h2 {
+        font-size: 28px;
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      .option {
+        width: calc(100% - 20px);
+      }
+    }
+
+    .footer {
+    margin-top: 20px; /* Adjust spacing from subject boxes */
+  }
+  footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+footer {
+  font-size: 14px; /* Adjusted font size for small devices */
+}
+
+
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>S5 CSE Selection</h1>
+  </header> 
+
+  <!-- Options -->
+  <div class="options">
+    <center><h2>Ready to dive into a module? Choose one!</h2></center><br>
+    <div class="option">
+      <a href="module1.html"><h2>MODULE 1</h2></a>
+    </div>
+    <div class="option">
+      <a href="module2.html"><h2>MODULE 2</h2></a>
+    </div>
+    <div class="option">
+      <a href="module3.html"><h2>MODULE 3</h2></a>
+    </div>
+    <div class="option">
+      <a href="module4.html"><h2>MODULE 4</h2></a>
+    </div>
+    <div class="option">
+      <a href="module5.html"><h2>MODULE 5</h2></a>
+    </div>
+    <footer>&copy; <b>2024 NigaX CEP  &nbsp;|&nbsp;</b> All rights reserved</footer>
+
+  </div>
+ 
+</body>
+</html>
