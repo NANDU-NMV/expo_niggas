@@ -177,36 +177,7 @@
       }
     }
 
-    /* Popup container styles */
-    .popup-container {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: #000000;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(184, 17, 17, 0.685);
-      z-index: 9999;
-      animation: fadeInUp 0.5s ease forwards;
-    }
-
-    .welcome-message {
-      font-size: 18px;
-      line-height: 1.5;
-      color: #04e2ff;
-      text-align: center;
-    }
-
-    .close-button {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      cursor: pointer;
-      color: #ffffff;
-      font-size: 40px;
-    }
-
+    
     /* Media query for small devices */
     @media only screen and (max-width: 768px) {
       footer {
@@ -217,16 +188,7 @@
   </style>
 </head>
 <body>
-  <!-- Popup container -->
-  <div id="popupContainer" class="popup-container">
-    <!-- Close button -->
-    <span class="close-button" onclick="closePopup()">&times;</span>
-    <!-- Welcome message -->
-    <div class="welcome-message">
-      <h2>Hello Guys!</h2>
-      <p>This is the perfect place for you! Here, you'll find all the YouTube classes and PDF notes neatly organized by subject. Let's dive into learning together!</p>
-    </div>
-  </div>
+  
 
   <!-- Heading section -->
   <div class="heading">
@@ -301,7 +263,7 @@
 
       setTimeout(function() {
         window.location.href = url;
-      }, 500); // Wait for 0.3s (animation duration) before navigating
+      }, 300); // Wait for 0.3s (animation duration) before navigating
     }
 
     // Function to play video
