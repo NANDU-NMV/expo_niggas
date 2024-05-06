@@ -212,5 +212,21 @@
       window.location.href = "Page1.html";
     }, 500); // Adjust the delay to match the duration of the fade-out animation
   }
+   // Function to navigate to another page
+   function navigateToAnotherPage() {
+    // Add the fade-out class to the content container
+    document.getElementById("contentContainer").classList.add("fade-out");
+
+    // Navigate to another page after the animation completes
+    setTimeout(function() {
+      window.location.href = "Page1.html";
+    }, 500); // Adjust the delay to match the duration of the fade-out animation
+  }
+
+  // Function to reset animations when returning to the page
+  window.addEventListener('pageshow', function(event) {
+    // Remove the fade-out class from the content container
+    document.getElementById("contentContainer").classList.remove("fade-out");
+  });
 </script>
 </html>
