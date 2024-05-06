@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NigaX Educational Platform</title>
-  <link rel="icon" type="image/x-icon" href="cropped_image.png">
+<link rel="icon" type="image/x-icon" href="cropped_image.png">
 
 <style>
   /* Global styles */
@@ -29,7 +29,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('bg11.png');
+    background-image: url('bg12.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1; /* Ensure the background is behind the content */
@@ -42,7 +42,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    background-color: rgba(0, 0, 0, 0.582); /* Semi-transparent black overlay */
     z-index: -1; /* Ensure the overlay is behind the content */
   }
 
@@ -71,9 +71,21 @@
     animation: fadeIn 1s forwards 0.5s;
   }
 
+  /* Animative text styles */
+  .animative-text {
+    font-size: 20px;
+    opacity: 0%;
+    animation: slideInUp 1s forwards 1s;
+    font-style: italic;
+    font-weight: 50;
+    text-shadow: #e61e28;
+    color: #ebc48a;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
   /* Button styles */
   .arrow-button {
-    background-color: #3498db;
+    background-color: #5316e0;
     color: #fff;
     padding: 20px;
     font-size: 24px;
@@ -86,7 +98,7 @@
   }
 
   .arrow-button:hover {
-    background-color: #2980b9;
+    background-color: #e61e28;
   }
 
   /* Keyframes for animations */
@@ -96,10 +108,36 @@
     }
   }
 
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   @keyframes bounce {
     to {
       transform: translateY(-10px);
     }
+  }
+
+  /* New animation for the content container */
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  /* Apply the fade-out animation when the fade-out class is added */
+  .fade-out {
+    animation: fadeOut 1s forwards;
   }
 
   /* Media queries for smaller devices */
@@ -112,39 +150,33 @@
       font-size: 18px;
     }
 
+    .animative-text {
+      font-size: 16px;
+    }
+
     .arrow-button {
-      font-size: 18px;
+      font-size: 30px;
       padding: 15px;
     }
-  }
 
-    /* Media queries for smaller devices */
-    @media screen and (max-width: 768px) {
+    /* Change background image for small devices */
     body {
-      background-image: url('bg1.jpg'); /* Small devices background image */
+      background-image: url('bg12.jpeg');
     }
   }
 
-   /* Media query for small devices */
-   @media only screen and (max-width: 768px) {
-      footer {
-        position: static;
-        margin-top: 20px;
-      }
-    }
-     /* Footer styles */
-     footer {
-      background-color: #333;
-      color: #fff;
-      padding: 10px 0;
-      text-align: center;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000; /* Ensure footer stays above other elements */
-    }
-
+  /* Footer styles */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure footer stays above other elements */
+  }
 </style>
 </head>
 <body>
@@ -154,7 +186,7 @@
   <div class="overlay"></div>
 
   <!-- Content container -->
-  <div class="content-container">
+  <div class="content-container" id="contentContainer">
     <!-- Heading -->
     <h1 class="heading">Welcome to Our Educational Platform</h1> 
 
@@ -163,15 +195,22 @@
 
     <!-- Arrow button -->
     <button class="arrow-button" onclick="navigateToAnotherPage()">&rarr;</button>
+    <!-- Animative text -->
+    <h2 class="animative-text" id="animativeText">This is the perfect place for you! Here, you'll find all the YouTube classes and PDF notes neatly organized by subject. Let's dive into learning together!</h2>
   </div>
-<!-- Footer -->
-<footer>&copy; <b>2024 NigaX CEP  &nbsp;</b> All rights reserved</footer>
-  
+  <!-- Footer -->
+  <footer>&copy; <b>2024 NigaX CEP  &nbsp;</b> All rights reserved</footer>
 </body>
 <!-- JavaScript for navigation -->
 <script>
-    function navigateToAnotherPage() {
-      window.location.href = "mainpage.html";
-    }
-  </script>
+  function navigateToAnotherPage() {
+    // Add the fade-out class to the content container
+    document.getElementById("contentContainer").classList.add("fade-out");
+
+    // Navigate to another page after the animation completes
+    setTimeout(function() {
+      window.location.href = "Page1.html";
+    }, 500); // Adjust the delay to match the duration of the fade-out animation
+  }
+</script>
 </html>
