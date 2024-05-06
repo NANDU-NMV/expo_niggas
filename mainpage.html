@@ -288,11 +288,12 @@
       }
     }
 
-    // Function to close the popup
-    function closePopup() {
-      var popupContainer = document.querySelector('.popup-container');
-      popupContainer.style.display = 'none';
-    }
+    // Function to reset animations when returning to the page
+    window.addEventListener('pageshow', function(event) {
+      // Remove the fade-out animation from the body
+      var body = document.querySelector('body');
+      body.style.animation = 'none';
+    });
   </script>
 </body>
 </html>
