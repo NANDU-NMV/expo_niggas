@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S6 CSE - Choose Your Subject!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: radial-gradient(circle, #4B4E6D, #2B2D42);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            opacity: 0; /* Initially hide the content */
+            animation: fadeIn 1s ease-out forwards; /* Animation for page load */
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            text-align: center;
+            color: #fff;
+            flex: 1;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 32px;
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+            margin-bottom: 30px;
+        }
+
+        .options-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .option-box {
+            width: 200px;
+            height: 150px;
+            margin: 15px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .option-box:hover {
+            background-color: #f8f8f8;
+            transform: scale(1.05);
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .option-title {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .option-description {
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>S6 CSE</h1>
+        <h2>Choose your Subject!</h2>
+        <div class="options-container">
+            <div class="option-box" onclick="navigateTo('design_and_analysis_of_algorithms.html')">
+                <div class="option-title">Design and Analysis of Algorithms</div>
+                <div class="option-description">Learn about the design, analysis, and optimization of algorithms.</div>
+            </div>
+            <div class="option-box" onclick="navigateTo('compiler_design.html')">
+                <div class="option-title">Compiler Design</div>
+                <div class="option-description">Study the principles and techniques behind compiler construction.</div>
+            </div>
+            <div class="option-box" onclick="navigateTo('computer_networks.html')">
+                <div class="option-title">Computer Networks</div>
+                <div class="option-description">Explore the architecture, protocols, and applications of computer networks.</div>
+            </div>
+            <div class="option-box" onclick="navigateTo('software_engineering_and_project_management.html')">
+                <div class="option-title">Software Engineering and Project Management</div>
+                <div class="option-description">Learn about software development methodologies and project management techniques.</div>
+            </div>
+            <div class="option-box" onclick="navigateTo('principles_of_management.html')">
+                <div class="option-title">Principles of Management</div>
+                <div class="option-description">Understand the fundamental principles of management in organizational settings.</div>
+            </div>
+            <div class="option-box" onclick="navigateTo('computer_vision.html')">
+                <div class="option-title">Computer Vision</div>
+                <div class="option-description">Explore the theory and applications of computer vision techniques.</div>
+            </div>
+            <div class="option-box" onclick="navigateTo('mobile_computing.html')">
+                <div class="option-title">Mobile Computing</div>
+                <div class="option-description">Study the principles and technologies behind mobile computing systems.</div>
+            </div>
+            <div class="option-box" onclick="navigateTo('natural_language_processing.html')">
+                <div class="option-title">Natural Language Processing</div>
+                <div class="option-description">Explore the computational techniques for understanding and processing human language.</div>
+            </div>
+            <div class="option-box" onclick="navigateTo('web_technologies.html')">
+                <div class="option-title">Web Technologies</div>
+                <div class="option-description">Learn about the technologies and protocols used in web development.</div>
+            </div>
+            <div class="option-box" onclick="navigateTo('high_performance_computing.html')">
+                <div class="option-title">High Performance Computing</div>
+                <div class="option-description">Study the techniques for designing and optimizing high-performance computing systems.</div>
+            </div>
+        </div>
+    </div>
+ <!-- Footer section -->
+ <footer class="footer">
+    &copy; <b>2024 NigaX CEP  &nbsp;| &nbsp; </b> All rights reserved.
+</footer>
+
+<script>
+    function navigateTo(url) {
+        window.location.href = url;
+    }
+</script>
+</body>
+</html>
