@@ -1,170 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>S1 Subjects</title>
-    <link rel="icon" type="image/x-icon" href="cropped_image.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S7 MECH - Choose Your Subject!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: radial-gradient(circle, #312ee6, #2e72da);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            opacity: 0; /* Initially hide the content */
+            animation: fadeIn 1s ease-out forwards; /* Animation for page load */
+        }
 
- <style>
-    /* Subject page styles */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-  animation: gradientAnimation 15s ease infinite;
-  background: linear-gradient(45deg, #c2face, #dae9b0, #d9a4db, #e7b3b3);
-  background-size: 400% 400%;
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            text-align: center;
+            color: #fff;
+            flex: 1;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 32px;
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+            margin-bottom: 30px;
+        }
+
+        .options-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .option-box {
+            width: 200px;
+            height: 150px;
+            margin: 15px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center text vertically */
+            align-items: center; /* Center text horizontally */
+        }
+
+        .option-box:hover {
+            background-color: #f8f8f8;
+            transform: scale(1.05);
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .option-title {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .option-description {
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            width: 100%;
+        }
+        .redirect-box {
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
 }
 
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+.redirect-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #2c2929;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-header {
-  background-color: #3498db;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
+.redirect-link:hover {
+    background-color: #0056b3;
 }
 
-.subject-boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 20px;
-}
-
-.subject-box {
-  width: 150px;
-  height: 150px;
-  margin: 10px;
-  background-color: #f1f1f1;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.subject-box:hover {
-  background-color: #ec6363;
-}
-
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 0;
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
-footer {
-  font-size: 14px; /* Adjusted font size for small devices */
-}
-
-.message-above-footer {
-  background-color: #ffffff28;
-  color: #802222;
-  text-align: center;
-  padding: 10px 0;
-}
-
-.jump-to-s2 {
-  margin-top: 20px;
-}
-
-.jump-to-s2 a {
-  display: inline-block;
-  background-color: #3498db;
-  color: #fff;
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.jump-to-s2 a:hover {
-  background-color: #3e21e2;
-}
-
-@media (min-width: 768px) {
-  .subject-boxes {
-    justify-content: space-around;
-  }
-  
-  .subject-box {
-    width: calc(20% - 20px); /* Adjust width for larger screens */
-  }
-
-  .footer {
-    margin-top: 20px; /* Adjust spacing from subject boxes */
-  }
-}
-
- </style>
-
+    </style>
 </head>
 <body>
-  <!-- Header section -->
-  <header>
-    <h1>S1 Subjects</h1>
-  </header>
-<center>
-  <!-- Subject boxes section -->
-  <div class="subject-boxes">
-    <div class="subject-box">
-      <a href="mods.html">
-      <!-- You can add your images or animations here -->
-      <h2>Linear Algebra and Calculus (MAT101)</h2>
-      </a>
+    <div class="container">
+        <h1>S1 </h1>
+        <h2>Choose your Subject!</h2>
+        <div class="options-container">
+            <div class="option-box" onclick="navigateTo('s7mechmods.html')">
+                <div class="option-title">Linear algebra and calculus</div>
+                <div class="option-description"> Unveiling the mathematical language that shapes the fabric of the universe.</div>
+            </div>
+            <div class="option-box" onclick="navigateTo('s7mechmods.html')">
+                <div class="option-title">Engineering chemistry</div>
+                <div class="option-description">Where molecules become the building blocks of innovation and progress.</div>
+            </div>
+            <div class="option-box" onclick="navigateTo('s7mechmods.html')">
+                <div class="option-title">Engineering mechanics</div>
+                <div class="option-description"> The cornerstone of understanding the physical world's intricate dance of forces and motion.</div>
+            </div>
+            <div class="option-box" onclick="navigateTo('s7mechmods.html')">
+                <div class="option-title">Life skills</div>
+                <div class="option-description">The toolbox for navigating life's maze with finesse and resilience.</div>
+            </div>
+            <div class="option-box" onclick="navigateTo('s7mechmods.html')">
+                <div class="option-title">Basics of electrical and electronics</div>
+                <div class="option-description">Illuminating the pathways of modern technology, from circuits to communication.</div>
+            </div>
+            
+        </div>
     </div>
-    <div class="subject-box">
-      <a href="mods.html">
-        <!-- You can add your images or animations here -->
-        <h2>Engineering Chemistry</h2></a>
-      </div>
-      <div class="subject-box">
-        <a href="mods.html">
-        <!-- You can add your images or animations here -->
-        <h2>Engineering Mechanics</h2></a>
-      </div>
-      <div class="subject-box">
-        <a href="mods.html">
-        <!-- You can add your images or animations here -->
-        <h2>Life Skills</h2></a>
-      </div>
-      <div class="subject-box">
-        <a href="mods.html">
-        <!-- You can add your images or animations here -->
-        <h2>Basics of Electrical & Electronics</h2></a>
-      </div>
-  </div>
-
-  <!-- Message for S2 -->
-  <div class="message-above-footer">
-    <h3>Subject not listed? Dive into S2 for an extended selection!</h3>
-    <div class="jump-to-s2">
-      <a href="S2.html"><i><b>S2</b> Click Here</i></a>
+    
+    <div class="redirect-box">
+        <p>Subject not listed? Dive into S2 for an extended selection!</p>
+        <a href="S2.html" class="redirect-link">Go</a>
     </div>
-  </div>
-</center>
-  <!-- Footer section -->
-  <div class="footer">
-    <footer>&copy; <b>2024 NigaX CEP  &nbsp;</b> All rights reserved</footer>
+    
+ <!-- Footer section -->
+ <footer class="footer">
+    &copy; <b>2024 NigaX CEP  &nbsp;| &nbsp; </b> All rights reserved.
+</footer>
 
-  </div>
+<script>
+    function navigateTo(url) {
+        window.location.href = url;
+    }
+</script>
 </body>
 </html>
