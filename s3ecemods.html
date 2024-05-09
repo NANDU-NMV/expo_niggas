@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>S3 ECE Selection</title>    <link rel="icon" type="image/x-icon" href="cropped_image.png">
+  <title>S3 ECE Selection</title>
+  <link rel="icon" type="image/x-icon" href="cropped_image.png">
 
   <style>
     body {
@@ -17,8 +18,8 @@
     }
 
     header {
-      background-color: #cc1ec3;
-      color: #ffffff;
+      background-color: #4CAF50;
+      color: #fff;
       text-align: center;
       padding: 20px 0;
     }
@@ -64,11 +65,16 @@
     .option h2 {
       margin: 0;
       font-size: 24px;
-      color: #fff; /* Adjusted text color */
       background-color: #0d21d1; /* Added background color */
       padding: 10px 20px; /* Added padding */
       border-radius: 10px; /* Added border radius */
       text-decoration: none; /* Remove underline */
+    }
+
+    .option h2 a {
+      color: #fff; /* Adjusted text color */
+      text-decoration: none; /* Remove underline */
+      font-weight: bold; /* Make text bold */
     }
 
     @keyframes bgAnimation {
@@ -98,23 +104,17 @@
       }
     }
 
-    .footer {
-    margin-top: 20px; /* Adjust spacing from subject boxes */
-  }
-  footer {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 0;
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
-footer {
-  font-size: 14px; /* Adjusted font size for small devices */
-}
-
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      font-size: 14px; /* Adjusted font size for small devices */
+    }
 
   </style>
 </head>
@@ -127,24 +127,30 @@ footer {
   <!-- Options -->
   <div class="options">
     <center><h2>Ready to dive into a module? Choose one!</h2></center><br>
-    <div class="option">
-      <a href="module1.html"><h2>MODULE 1</h2></a>
+    <div class="option" onclick="navigateTo('s3ecemod1.html')">
+      <h2><a href="#">MODULE 1</a></h2>
     </div>
-    <div class="option">
-      <a href="module2.html"><h2>MODULE 2</h2></a>
+    <div class="option" onclick="navigateTo('s3ecemod2.html')">
+      <h2><a href="#">MODULE 2</a></h2>
     </div>
-    <div class="option">
-      <a href="module3.html"><h2>MODULE 3</h2></a>
+    <div class="option" onclick="navigateTo('s3ecemod3.html')">
+      <h2><a href="#">MODULE 3</a></h2>
     </div>
-    <div class="option">
-      <a href="module4.html"><h2>MODULE 4</h2></a>
+    <div class="option" onclick="navigateTo('s3ecemod4.html')">
+      <h2><a href="#">MODULE 4</a></h2>
     </div>
-    <div class="option">
-      <a href="module5.html"><h2>MODULE 5</h2></a>
+    <div class="option" onclick="navigateTo('s3ecemod5.html')">
+      <h2><a href="#">MODULE 5</a></h2>
     </div>
-    <footer>&copy; <b>2024 NigaX CEP  &nbsp;|&nbsp;</b> All rights reserved</footer>
-
   </div>
- 
+
+  <!-- Footer -->
+  <footer>&copy; <b>2024 NigaX CEP  &nbsp;|&nbsp;</b> All rights reserved</footer>
+
+  <script>
+    function navigateTo(page) {
+      window.location.href = page;
+    }
+  </script>
 </body>
 </html>
