@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S6 ECE - Choose Your Subject!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: radial-gradient(circle, #579ceb, #030f02);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            opacity: 0; /* Initially hide the content */
+            animation: fadeIn 1s ease-out forwards; /* Animation for page load */
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            text-align: center;
+            color: #fff;
+            flex: 1;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 32px;
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+            margin-bottom: 30px;
+        }
+
+        .options-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .option-box {
+            width: 200px;
+            height: 150px;
+            margin: 15px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center text vertically */
+            align-items: center; /* Center text horizontally */
+        }
+
+        .option-box:hover {
+            background-color: #f8f8f8;
+            transform: scale(1.05);
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .option-title {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .option-description {
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>S6 ECE</h1>
+        <h2>Choose your Subject!</h2>
+        <div class="options-container">
+            <div class="option-box" onclick="navigateTo('s6ecemods.html')">
+                <div class="option-title">Digital Communication</div>
+                <div class="option-description">Study digital communication principles.</div>
+            </div>
+            <div class="option-box" onclick="navigateTo('s6ecemods.html')">
+                <div class="option-title">VLSI (Very Large Scale Integration)</div>
+                <div class="option-description">Explore VLSI design and implementation.</div>
+            </div>
+            <div class="option-box" onclick="navigateTo('s6ecemods.html')">
+                <div class="option-title">Embedded Systems</div>
+                <div class="option-description">Learn about embedded system design.</div>
+            </div>
+            <div class="option-box" onclick="navigateTo('s6ecemods.html')">
+                <div class="option-title">Antenna & Wave Propagation</div>
+                <div class="option-description">Study antennas and wave propagation.</div>
+            </div>
+            <div class="option-box" onclick="navigateTo('s6ecemods.html')">
+                <div class="option-title">Object Oriented Programming</div>
+                <div class="option-description">Explore object-oriented programming concepts.</div>
+            </div>
+            <div class="option-box" onclick="navigateTo('s6ecemods.html')">
+                <div class="option-title">Robotics</div>
+                <div class="option-description">Learn about robotics and automation.</div>
+            </div>
+            <div class="option-box" onclick="navigateTo('s6ecemods.html')">
+                <div class="option-title">Digital Image Processing</div>
+                <div class="option-description">Study digital image processing techniques.</div>
+            </div>
+            <div class="option-box" onclick="navigateTo('s6ecemods.html')">
+                <div class="option-title">Real-Time Operating Systems</div>
+                <div class="option-description">Learn about real-time operating system principles.</div>
+            </div>
+            <div class="option-box" onclick="navigateTo('s6ecemods.html')">
+                <div class="option-title">Modelling & Simulation of Communication System</div>
+                <div class="option-description">Explore modelling and simulation in communication systems.</div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer section -->
+    <footer class="footer">
+        &copy; <b>2024 NigaX CEP  &nbsp;| &nbsp; </b> All rights reserved.
+    </footer>
+
+    <script>
+        function navigateTo(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>
