@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHEMISTRY Module 1</title>
+    <link rel="icon" type="image/x-icon" href="cropped_image.png">
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden; /* To prevent horizontal scrolling */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: radial-gradient(circle, #ec4a75, #f78446);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        
+
+        header {
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            animation: fadeIn 1s ease-in-out; /* Header fade-in animation */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        main {
+            padding: 20px;
+            color: #fff;
+            animation: slideInUp 1s ease-in-out; /* Main content slide-up animation */
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .pdf-section, .video-section {
+            margin-bottom: 30px;
+        }
+
+        .pdf-container, .video-container {
+            text-align: center;
+        }
+
+        .pdf-container a, .video-item button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .pdf-container a:hover, .video-item button:hover {
+            background-color: #0056b3;
+        }
+
+        .video-item {
+            margin-bottom: 20px;
+        }
+
+        .video-item h3 {
+            margin-top: 0;
+        }
+
+        .video-item button {
+            animation: pulse 1s infinite alternate; /* Button pulse animation */
+        }
+
+        @keyframes pulse {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.1);
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            h1 {
+                font-size: 1.5em;
+            }
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <header>
+            <h1>S1 CHEMISTRY | Module 1</h1>
+        </header>
+        <BR><BR><BR><BR>
+        <main>
+            <section class="pdf-section">
+             <CENTER>  <h2 style="font-size: xx-large; color: #333; font-style: italic; text-decoration: underline;">PDF Notes</h2>
+                <div class="pdf-container">
+                    <a href="CYT100 M1-Ktunotes.in.pdf" target="_blank">PDF File 1</a>
+                    <a href="Chem - M1 Ktunotes.in.pdf" target="_blank">PDF File 2</a>
+                    <!-- Add more PDF links as needed -->
+                </div><BR><BR><BR><BR>
+            </section>
+            <section class="video-section">
+                <CENTER><H2 style="font-size: xx-large; color: #333; font-style: italic; text-decoration: underline;">Video Lectures</h2></CENTER> <BR><BR>
+                <div class="video-container">
+                    <div class="video-item">
+                        <h3>CHEMISTRY TOPPER</h3>
+                        <button onclick="window.open('https://www.youtube.com/watch?v=L3PTBcSu1JQ&list=PLbufGhEnWbUbOtVV_SoHPAx_znWPM-5QG')">Watch</button>
+                    </div>
+                    <div class="video-item">
+                        <h3>SIMPLE LEARNING ACADEMY </h3>
+                        <button onclick="window.open('https://www.youtube.com/watch?v=9P32dGXKGw4&list=PLLQAWQRZZ8UnuKwiiFPAqZFyiTqwEv4-5')">Watch</button>
+                    </div></CENTER> 
+                    <div class="video-item">
+                        <h3>MULTMEDIA OF SCIENCE MIDHUNA</h3>
+                        <button onclick="window.open('https://www.youtube.com/watch?v=zJySBna1mp4&list=PLfLjZzQnVWJ2KcPeoXDnmkfnWy-3MjszK')">Watch</button>
+                    </div></CENTER> 
+                </div>
+            </section>
+        </main>
+    </div>
+    <!-- Footer section -->
+ <footer class="footer">
+    &copy; <b>2024 NigaX CEP  &nbsp;| &nbsp; </b> All rights reserved.
+</footer>
+
+</body>
+</html>
