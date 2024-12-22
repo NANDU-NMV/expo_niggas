@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Under Maintenance</title>
+    
+    <!-- Import Google Font Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Basic reset for margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and background setup */
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #4caf50, #81c784);
+            background-size: 400% 400%;
+            animation: gradientShift 6s ease infinite;
+            color: #fff;
+            margin: 0;
+        }
+
+        /* Background gradient animation */
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Main message container styling */
+        .message-container {
+            text-align: center;
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 600;
+        }
+
+        /* Bolder spinning loader with glow */
+        .loader {
+            border: 10px solid rgba(255, 255, 255, 0.2);  /* Increased border width */
+            border-top: 10px solid #81c784;  /* Increased top border thickness */
+            border-radius: 50%;
+            width: 100px;  /* Increased size */
+            height: 100px; /* Increased size */
+            animation: spin 1s linear infinite, glow 1.5s ease-in-out infinite;
+            margin: 20px auto;
+            box-shadow: 0 0 20px rgba(129, 199, 132, 0.8); /* Glow effect */
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Glowing effect */
+        @keyframes glow {
+            0% {
+                box-shadow: 0 0 15px rgba(129, 199, 132, 0.6);
+            }
+            50% {
+                box-shadow: 0 0 30px rgba(129, 199, 132, 1);
+            }
+            100% {
+                box-shadow: 0 0 15px rgba(129, 199, 132, 0.6);
+            }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .message-container {
+                padding: 30px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+
+            .loader {
+                width: 80px; /* Slightly smaller for mobile */
+                height: 80px; /* Slightly smaller for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="message-container">
+        <h1>We Are Updating Our Notes and Lectures Hub</h1>
+        <p>We're working hard to bring you new features and updated resources. Please bear with us while we make improvements.</p>
+        <p>In the meantime, we appreciate your patience as we enhance your learning experience.</p>
+        <div class="loader"></div>
+    </div>
+</body>
+</html>
